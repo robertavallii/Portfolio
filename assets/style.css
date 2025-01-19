@@ -1,0 +1,482 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Hairline.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-HairlineIt.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Thin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-ThinIt.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-LightIt.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-RegularIt.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-MediumIt.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-SemiboldIt.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-BoldIt.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-BlackIt.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Stili globali */
+body {
+  margin: 1rem;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: black;
+  cursor: none; /* Rimuoviamo il cursore di default */
+  font-family: "Suisse Int'l";
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema chiaro */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0F0;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  mix-blend-mode: exclusion;
+}
+
+body:hover::after {
+  top: calc(var(--mouse-y) - 15px);
+  left: calc(var(--mouse-x) - 15px);
+}
+
+/* Contenitore nav */
+.nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 0px;
+  align-items: center;
+}
+
+/* Stile generale per gli elementi di navigazione */
+.nav a,
+.nav span {
+  color: #ffffff;
+  font-family: "Suisse Int'l";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  text-decoration-line: none;
+}
+
+.nav span {
+  color: #0F0;
+}
+
+.nav a:hover {
+  text-decoration-line: underline;
+  color: #0F0;
+}
+
+.project-link {
+  color: #FF6347;
+}
+
+.nav a:nth-child(1) {
+  grid-column: span 2;
+}
+
+.nav a:nth-child(2) {
+  grid-column: span 2;
+}
+
+.nav a:nth-child(3) {
+  grid-column: span 2;
+}
+
+.nav a:nth-child(4) {
+  grid-column: 12;
+}
+
+.nav a:nth-child(5) {
+  grid-column: 12;
+}
+
+#roberta-valli-link-nav {
+  color: #0F0;
+  text-decoration: underline;
+}
+
+#about-link-nav {
+  color: #0F0;
+  text-decoration: underline;
+}
+
+#project-link-nav {
+  color: #0F0;
+  text-decoration: underline;
+}
+
+.header {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.frase-intro {
+  color: #FFF;
+  font-family: "Suisse Int'l";
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+#hello {
+  margin-bottom: -20px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes changeLanguage {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.title-section {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.box-project {
+  grid-column: span 6;
+}
+
+.project-title {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+.project-description {
+  color: #FFF;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding-bottom: 15px;
+}
+
+.project-section img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.preview-project {
+  margin-bottom: 100px;
+}
+
+.frase-about{
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 52px; /* 130% */
+}
+
+.grid-container-about{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.section-education{
+  grid-column: 7 / 10; /* Dalla colonna 8 alla colonna 10 (esclusa la 10) */
+}
+
+.section-work {
+  grid-column: 10 / 14; /* Dalla colonna 8 alla colonna 10 (esclusa la 10) */
+
+}
+
+.text-section-about{
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.text-section-about{
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.footer {
+  margin-top: 50px; /* Aggiunge uno spazio sopra il footer */
+  text-align: center; /* Allinea il contenuto al centro */
+}
+
+.footer-line {
+  width: 100%; /* Occupa tutta la larghezza del footer */
+  height: 0.75px; /* Altezza della linea */
+  background-color: #FFF; /* Colore della linea */
+  margin-bottom: 10px; /* Spazio tra la linea e il testo */
+}
+
+.footer-text {
+  color: #FFF; /* Colore del testo */
+  font-size: 11px; /* Dimensione del font */
+  font-style: normal; /* Stile del font */
+  font-weight: 400; /* Peso del font */
+  line-height: normal; /* Altezza della linea */
+  margin-bottom: -5px; /* Spazio tra la linea e il testo */
+
+}
+
+/* Tema chiaro */
+            body.light-mode {
+              background-color: white;
+              color: black;
+            }
+            body.light-mode .footer-line {
+              background-color: black; /* Colore nero in modalità chiara */
+            }
+
+            body.light-mode .nav a,
+            body.light-mode .nav span,
+            body.light-mode .frase-intro,
+            body.light-mode .project-title,
+            body.light-mode .title-section,
+            body.light-mode .footer-text,
+            body.light-mode .project-description {
+              color: black;  /* Imposta il colore del testo in modalità chiara */
+            }
+
+            /* Tema scuro (default) */
+            body {
+              background-color: black;
+              color: white;
+            }
+
+            body .nav a,
+            body .nav span,
+            body .frase-intro,
+            body .project-title,
+            body .project-description {
+              color: white; /* Imposta il colore del testo in modalità scura */
+            }
+
+            body:hover::after {
+              top: calc(var(--mouse-y) - 15px);
+              left: calc(var(--mouse-x) - 15px);
+            }
+
+            .nav a:hover {
+              color: #0F0;  /* Cambia il colore del testo al passaggio del mouse */
+              text-decoration-line: underline;
+            }
+            
+            .project-link {
+              color: #FF6347;
+            }
+
+            /* Rendi il colore dei testi esplicito anche per gli elementi specifici */
+            #roberta-valli-link-nav,
+            #about-link-nav,
+            #project-link-nav {
+              color: #0F0;
+              text-decoration: underline;
+            }
+
+
+
+
+
+
+/* Responsività per schermi più piccoli */
+@media (max-width: 1200px) {
+  .nav {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #roberta-valli {
+    grid-column: span 3;
+  }
+
+  .nav a:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  .nav a:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .nav a:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .nav a:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #roberta-valli {
+    grid-column: span 3;
+  }
+
+  .nav a:nth-child(2),
+  .nav a:nth-child(3) {
+    grid-column: span 3;
+  }
+
+  .nav a:nth-child(4),
+  .nav a:nth-child(5) {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    grid-template-columns: 1fr;
+  }
+
+  #roberta-valli {
+    grid-column: span 1;
+  }
+
+  .nav a {
+    grid-column: span 1;
+  }
+}
