@@ -110,8 +110,6 @@
   font-style: italic;
 }
 
-
-
 /* Stili globali */
 body {
   margin: 1.5rem;
@@ -418,21 +416,30 @@ margin-bottom: 20px;
 }
 
 
+
 .container-single-project-gallery {
-  grid-column: 6 / 13; /* Inizia dalla colonna 7 e finisce alla colonna 12 */
+  grid-column: 6 / 13; /* Posizionamento nella griglia */
   display: flex;
-  flex-direction: column; /* Disposizione verticale */
-  gap: 20px; /* Spazio tra le immagini */
-  max-height: 70vh; /* Limita l'altezza della galleria per farla essere scrollabile */
-  overflow-y: auto; /* Rende la galleria scrollabile verticalmente */
-  padding-right: 10px; /* Aggiunge spazio per non toccare i bordi */
+  flex-direction: column; /* Allineamento verticale */
+  row-gap: 20px; /* Spazio tra le righe */
+  max-height: 70vh; /* Limita l'altezza della galleria */
+  overflow-y: auto; /* Scroll verticale */
+  padding-right: 10px; /* Spazio a destra */
 }
 
 .container-single-project-gallery img {
-  width: 100%; /* Immagini adattate alla larghezza del contenitore */
-  height: auto; /* Mantiene le proporzioni originali */
+  width: 100%; /* Adatta la larghezza al contenitore */
+  height: auto; /* Mantieni proporzioni */
+  display: block; /* Evita sovrapposizioni */
+  top: 0;
 }
 
+
+.container-single-project-gallery img:first-child {
+  position: sticky; /* Rende la prima immagine "fissa" durante lo scroll */
+  top: 0; /* La fissa in cima al contenitore */
+  z-index: 10; /* Assicura che la prima immagine stia sopra alle altre */
+}
 
 
 
