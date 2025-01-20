@@ -110,6 +110,8 @@
   font-style: italic;
 }
 
+
+
 /* Stili globali */
 body {
   margin: 1.5rem;
@@ -128,8 +130,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 1.5rem); /* 100% dell'altezza della finestra meno i margini del body */
-
-}
+  padding-bottom: 50px; /* Aggiunge spazio per il footer */
+  }
 /* Il contenuto principale si espande per occupare tutto lo spazio disponibile */
 .main-content {
   flex: 1;
@@ -162,15 +164,15 @@ body:hover::after {
 /* Contenitore nav */
 .nav {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
   row-gap: 0px;
   align-items: center;
   background-color: black;
-  position: sticky; /* Rende la barra "sticky" nella parte superiore */
-  top: 0; /* Blocca la barra in cima */
-  height: 65px; /* Altezza della barra */
+  height: 65px;  /*Altezza della barra */
   z-index: 1000; /* Porta la barra di navigazione al livello più alto */
+  width: 100%; /* Occupa tutta la larghezza dello schermo */
+  top: 0; /* Mantiene la barra in alto */
+  position: fixed; /* Cambiato da sticky a fixed */
 }
 
 /* Stile generale per gli elementi di navigazione */
@@ -235,8 +237,8 @@ body:hover::after {
 }
 
 .header {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .header-about {
   margin-top: 80px;
@@ -284,15 +286,53 @@ h1 {
   font-weight: 500;
   line-height: normal;
   text-transform: lowercase;
+  text-decoration: none; /* Rimuove la sottolineatura */
+
 }
 
+
+
+a {
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: inherit; /* Eredita il colore dal testo */
+}
+
+a:visited {
+  color: inherit; /* Impedisce che il link cambi colore dopo essere stato visitato */
+}
+
+/* Stile per il link quando il mouse è sopra (hover) */
+a:hover {
+  text-decoration: none; /* Rende il link sottolineato al passaggio del mouse */
+  color: #0F0; /* Puoi scegliere un colore personalizzato */
+}
+
+/* Rimuovi la sottolineatura e il viola sotto specifici elementi */
+.project-title-collection a,
+.project-description-collection a {
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: inherit; /* Mantieni il colore del testo */
+}
+
+.project-title-collection a:hover,
+.project-description-collection a:hover {
+  text-decoration: none; /* Aggiunge sottolineatura solo su hover */
+  color: #0F0; /* Colore hover verde */
+}
+
+/* modifica titolo collezione*/
 .project-title-collection {
-  color: #FFF;
+  color: #ff0000;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: lowercase;
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: inherit; /* Eredita il colore del testo normale, per evitare il viola */
+  text-decoration: none; /* Rimuove la sottolineatura */
+
+
 }
 
 .project-section {
@@ -307,12 +347,15 @@ h1 {
   margin-bottom: 30px;
 }
 
+
+
 .project-description-collection {
   color: #FFF;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: inherit; /* Eredita il colore del testo normale, per evitare il viola */
 }
 
 .project-section img {
@@ -412,27 +455,33 @@ line-height: 140%;
 /* footer */
 .footer {
   margin-top: 50px; /* Aggiunge uno spazio sopra il footer */
+  height: 50px;
   text-align: center; /* Allinea il contenuto al centro */
-  margin-bottom: 15px; /* Aggiunge uno spazio sopra il footer */
   text-align: center;
-  ;
-}
+  background-color: black; /* Colore di sfondo */
+  position: fixed; /* Rende il footer fisso */
+  bottom: 0; /* Fissa il footer nella parte inferiore */
+  left: 0; /* Allinea il footer a sinistra */
+  width: 100%; /* Assicura che occupi tutta la larghezza */
+  z-index: 1000; /* Porta il footer sopra gli altri elementi */
+  display: flex; /* Utilizza Flexbox per l'allineamento */
+  justify-content: center; /* Centra orizzontalmente */
+  align-items: center; /* Centra verticalmente */
+  border-top: 1px solid white; /* Filetto bianco in alto */
 
-.footer-line {
-  width: 100%; /* Occupa tutta la larghezza del footer */
-  height: 0.75px; /* Altezza della linea */
-  background-color: #FFF; /* Colore della linea */
-  margin-bottom: 10px; /* Spazio tra la linea e il testo */
 }
 
 .footer-text {
   color: #FFF; 
-  font-size: 11px; 
+  font-size: 12px; 
   font-style: normal; 
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal; 
-  margin-bottom: -5px; 
+  background-color: black; /* Colore di sfondo */
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
+
 
 
 /* Tema chiaro */

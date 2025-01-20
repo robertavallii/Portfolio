@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "titolo_progetto": "ONYX",
+    "descrizione_progetto": "Brand Identity - User Interface - User Experience",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/immagine_prova_01.jpg"
+      }
+    ],
+    "descrizione_completa": "ONYX is an imaginary fashion brand, conceived in a dystopian future set in the year 2100, where climate catastrophes have become the new normal. In this scenario, ONYX was born as a response to the need to survive and adapt to a hostile world by offering durable, functional and distinctively designed garments. After the first phase of development and conception of the brand and visual identity, there followed a phase of experimentation with AI, used for the creation of all the images and videos. The project was an opportunity to combine the designer's creativity with the potential of artificial intelligence, exploring new dimensions.",
+    "committente": "SUPSI",
+    "anno": "2024-2025",
+    "categoria": "Brand Identity - User Interface - User Experience"
+  },
+  {
+    "id": 2,
+    "titolo_progetto": "Photography Events website",
+    "descrizione_progetto": "User Interface",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/immagine_prova_01.jpg"
+      }
+    ],
+    "descrizione_completa": "Photography Events is a design project for a website dedicated to the online sale of photo exhibition tickets, available for mobile and desktop. In addition to ensuring a smooth and intuitive user experience, the key objective was to create a strong and consistent visual style, based on two key words: bold and technical, which guided all design choices. The project combined design innovation and functional design, offering a high quality user experience.",
+    "committente": "SUPSI",
+    "anno": "2024",
+    "categoria": "User Interface"
+  },
+  {
+    "id": 3,
+    "titolo_progetto": "Semester website",
+    "descrizione_progetto": "User Interface - Coding",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/immagine_prova_01.jpg"
+      }
+    ],
+    "descrizione_completa": "A responsive website created to represent the SEMESTER magazine, to communicate the mood of the project and tell its main contents. Designed to be usable on desktop and mobile, the site is divided into different sections showing the works realised, describing the identity of the magazine and highlighting the contributions of the participants. The site is designed to offer simple and direct access to the contents, accompanying users in their discovery of SEMESTER.",
+    "committente": "SUPSI",
+    "anno": "2024-2025",
+    "categoria": "User Interface - Coding"
+  },
+  {
+    "id": 4,
+    "titolo_progetto": "DESIGN HUB",
+    "descrizione_progetto": "User Interface",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/immagine_prova_01.jpg"
+      }
+    ],
+    "descrizione_completa": "Design Hub is a project designed to become a reference point for young designers looking for inspiration. The site brings together articles on different areas of design and offers video tutorials, providing a wide range of useful content to stimulate creativity and improve skills. The aim is to create a platform that combines theory and practice, providing quality resources for those who wish to deepen their knowledge in the field of design.",
+    "committente": "SUPSI",
+    "anno": "2023",
+    "categoria": "User Interface"
+  },
+  {
+    "id": 5,
+    "titolo_progetto": "Face AI",
+    "descrizione_progetto": "Interaction Design - User Interface",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/immagine_prova_01.jpg"
+      }
+    ],
+    "descrizione_completa": "Face AI is a project that explores the use of artificial intelligence to analyse and catalogue human faces, using around 20,000 photographs taken with my iPhone over the years. Employing technologies such as YOLO and Face Detect, the project identifies and analyses faces in terms of gender, age and facial expressions. The simple and intuitive interface allows users to filter images and view additional details via an interactive popup. Designed as a personal archive, it offers an innovative way to explore and organise faces and facial features in a fluid and functional way.",
+    "committente": "SUPSI",
+    "anno": "2024",
+    "categoria": "Interaction Design - User Interface"
+  },
+  {
+    "id": 6,
+    "titolo_progetto": "Amnesia",
+    "descrizione_progetto": "Corporate - Brand Identity",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/immagine_prova_01.jpg"
+      }
+    ],
+    "descrizione_completa": "Amnesia is a branding project for a vodka inspired by a superpower: ‘drinking to forget’. The project involved the creation of the entire brand identity, starting with the concept and the development of vision, mission and values. Subsequently, the visual elements were created, such as the logo, colours, typeface and communication artefacts, including the landing page, packaging and promotional material. The objective was to create a brand that embodied the superpower of forgetting, with a distinctive and consistent design that would tell a unique and memorable experience.",
+    "committente": "SUPSI",
+    "anno": "2024",
+    "categoria": "Corporate - Brand Identity"
+  }
+]

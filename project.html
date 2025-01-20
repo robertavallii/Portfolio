@@ -8,55 +8,88 @@
 </head>
 <body>
 
+<div class="wrapper">
+    <nav class="nav">
+        <a href="index.html">Roberta Valli</a>
+        <a href="project_collection.html" id="roberta-valli-link-nav">project</a>
+        <a href="about.html">about</a>
+        <a href="mailto:valliroberta8@gmail.com">contact</a>
+    </nav>
 
-      <div class="wrapper">
-        <nav class="nav">
-            <a href="about.html">Roberta Valli</a>
-            <a href="project_collection.html" id="roberta-valli-link-nav">project</a>
-            <a href="about.html">about</a>
-            <a href="mailto:valliroberta8@gmail.com">contact</a> 
-        </nav> 
-    
     <header class="header">
         <h1 class="frase-intro">Specialized in media and interaction design, with a passion for web and corporate design.</h1>
     </header>
 
-    
-   <div class="container-single-project">
+    <div class="container-single-project">
+        <div id="onyx-project-description" class="container-single-project-description">
+            <div id="single-project-title" class="single-project-title"></div>
+            <div id="single-project-text" class="single-project-text"></div>
+            <div id="single-project-committente" class="single-project-committente"></div>
+            <div id="single-project-anno" class="single-project-anno"></div>
+            <div id="single-project-categoria" class="single-project-categoria"></div>
+        </div>
+        <div class="container-single-project-gallery">
+            <img id="single-project-image" src="" alt="project-image">
+        </div>
+    </div>
 
-              <div class="container-single-project-description">
-                  <div class="single-project-title">Titolo 01</div>
-                  <div class="single-project-text"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec ex convallis, vehicula est nec, blandit risus. Duis felis mauris, tincidunt eget pretium id.  Phasellus nec ex convallis, vehicula est nec, blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec ex convallis, vehicula est nec. Phasellus nec ex convallis, vehicula est nec, blandit risus. Duis felis mauris, tincidunt eget pretium id.  Phasellus nec ex convallis.<br><br>SUPSI<br>2022<br>Editorial design<br></div>
-              </div>
-              
-              
-              <div class="container-single-project-gallery">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-                  <img src="assets/immagini_progetti/immagine_prova_01.jpg" alt="preview-project">
-              </div>
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <p class="footer-text">designed and coded by me. © 2025 – All rights reserved, unless otherwise noted.</p>
+    </footer>
+</div>
 
-  </div>
-    
+<script>
+  
+// Recupera l'ID del progetto dalla query string
+const params = new URLSearchParams(window.location.search);
+const projectId = params.get('id');
+
+// Controlla se l'ID è valido
+if (!projectId) {
+  alert('Nessun progetto selezionato!');
+} else {
+  // Carica i dati dal file JSON
+  fetch('assets/project.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Errore nel caricamento del JSON: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Trova il progetto corrispondente all'ID
+      const progetto = data.find(proj => proj.id === parseInt(projectId, 10));
+
+      if (!progetto) {
+        document.querySelector('.container-single-project').innerHTML = '<p>Progetto non trovato!</p>';
+        return;
+      }
+
+      // Riempie i dettagli del progetto nel DOM
+      document.getElementById('single-project-title').textContent = progetto.titolo_progetto;
+      document.getElementById('single-project-text').textContent = progetto.descrizione_completa;
+      document.getElementById('single-project-committente').textContent = `Committente: ${progetto.committente}`;
+      document.getElementById('single-project-anno').textContent = `Anno: ${progetto.anno}`;
+      document.getElementById('single-project-categoria').textContent = `Categoria: ${progetto.categoria}`;
+
+      // Imposta l'immagine del progetto
+      const projectImage = document.getElementById('single-project-image');
+      projectImage.src = progetto.immagini[0]?.url || 'assets/default-image.jpg';
+      projectImage.alt = progetto.titolo_progetto;
+    })
+    .catch(err => {
+      console.error('Errore durante il caricamento del progetto:', err);
+      document.querySelector('.container-single-project').innerHTML = '<p>Errore nel caricamento dei dettagli del progetto. Riprova più tardi.</p>';
+    });
+}
+
 
 
   
-      <footer class="footer">
-        <div class="footer-line"></div>
-        <p class="footer-text">designed and coded by me. © 2025 – All rights reserved, unless otherwise noted.</p>
-      </footer>
-
-
-      
-
-
-
+</script>
 
 <script src="assets/script.js"></script>
+
 </body>
 </html>
