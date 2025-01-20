@@ -112,7 +112,7 @@
 
 /* Stili globali */
 body {
-  margin: 1rem;
+  margin: 1.5rem;
   padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -121,6 +121,20 @@ body {
   font-family: "Suisse Int'l";
   transition: background-color 0.3s, color 0.3s;
 }
+
+
+/* Contenitore principale */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 1.5rem); /* 100% dell'altezza della finestra meno i margini del body */
+
+}
+/* Il contenuto principale si espande per occupare tutto lo spazio disponibile */
+.main-content {
+  flex: 1;
+}
+
 
 /* Tema chiaro */
 body.light-mode {
@@ -152,6 +166,11 @@ body:hover::after {
   column-gap: 20px;
   row-gap: 0px;
   align-items: center;
+  background-color: black;
+  position: sticky; /* Rende la barra "sticky" nella parte superiore */
+  top: 0; /* Blocca la barra in cima */
+  height: 65px; /* Altezza della barra */
+  z-index: 1000; /* Porta la barra di navigazione al livello più alto */
 }
 
 /* Stile generale per gli elementi di navigazione */
@@ -164,6 +183,7 @@ body:hover::after {
   font-weight: 500;
   line-height: 160%;
   text-decoration-line: none;
+  text-transform: none;
 }
 
 .nav span {
@@ -192,7 +212,7 @@ body:hover::after {
 }
 
 .nav a:nth-child(4) {
-  grid-column: 12;
+  grid-column: 16;
 }
 
 .nav a:nth-child(5) {
@@ -215,8 +235,12 @@ body:hover::after {
 }
 
 .header {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.header-about {
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .frase-intro {
@@ -224,8 +248,8 @@ body:hover::after {
   font-family: "Suisse Int'l";
   font-size: 65px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
+  font-weight: 500;
+  line-height: 110%;
 }
 
 #hello {
@@ -250,12 +274,25 @@ h1 {
   padding: 0;
 }
 
-.title-section {
+.title-section, 
+.title-section-about,
+.project-title-collection,
+.single-project-title {
   color: #FFF;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
+  text-transform: lowercase;
+}
+
+.project-title-collection {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: lowercase;
 }
 
 .project-section {
@@ -265,43 +302,34 @@ h1 {
   row-gap: 20px;
 }
 
-.box-project {
+.box-project-collection {
   grid-column: span 6;
+  margin-bottom: 30px;
 }
 
-.project-title {
+.project-description-collection {
   color: #FFF;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%;
-  padding-top: 0px;
-  padding-bottom: 5px;
-}
 
-.project-description {
-  color: #FFF;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  padding-bottom: 15px;
 }
 
 .project-section img {
   width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .preview-project {
   margin-bottom: 100px;
 }
 
+/* about pagina*/
 .frase-about{
 font-size: 40px;
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 line-height: 52px; /* 130% */
 }
 
@@ -322,25 +350,72 @@ line-height: 52px; /* 130% */
 }
 
 .text-section-about{
-font-size: 20px;
+font-size: 13px;
 font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-transform: capitalize;
-margin-top: 30px;
-margin-bottom: 30px;
+font-weight: 500;
+line-height: 140%;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
-.text-section-about{
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+/* Sezione progetti singoli */
+.container-single-project {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 colonne */
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
+.container-single-project-description {
+  grid-column: 1 / 5;
+  position: sticky; /* Questo farà sì che la descrizione resti visibile durante lo scroll */
+  top: 0; /* Fissa la descrizione in alto */
+  z-index: 10; /* Assicurati che sia sopra la galleria */
+  padding-bottom: 20px; /* Distanza tra la descrizione e la galleria */
+}
+
+
+.container-single-project-gallery {
+  grid-column: 6 / 13; /* Inizia dalla colonna 7 e finisce alla colonna 12 */
+  display: flex;
+  flex-direction: column; /* Disposizione verticale */
+  gap: 20px; /* Spazio tra le immagini */
+  max-height: 70vh; /* Limita l'altezza della galleria per farla essere scrollabile */
+  overflow-y: auto; /* Rende la galleria scrollabile verticalmente */
+  padding-right: 10px; /* Aggiunge spazio per non toccare i bordi */
+}
+
+.container-single-project-gallery img {
+  width: 100%; /* Immagini adattate alla larghezza del contenitore */
+  height: auto; /* Mantiene le proporzioni originali */
+}
+
+
+
+
+.single-project-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.single-project-text {
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+}
+
+
+
+
+/* footer */
 .footer {
   margin-top: 50px; /* Aggiunge uno spazio sopra il footer */
   text-align: center; /* Allinea il contenuto al centro */
+  margin-bottom: 15px; /* Aggiunge uno spazio sopra il footer */
+  text-align: center;
+  ;
 }
 
 .footer-line {
@@ -351,14 +426,14 @@ line-height: normal;
 }
 
 .footer-text {
-  color: #FFF; /* Colore del testo */
-  font-size: 11px; /* Dimensione del font */
-  font-style: normal; /* Stile del font */
-  font-weight: 400; /* Peso del font */
-  line-height: normal; /* Altezza della linea */
-  margin-bottom: -5px; /* Spazio tra la linea e il testo */
-
+  color: #FFF; 
+  font-size: 11px; 
+  font-style: normal; 
+  font-weight: 500;
+  line-height: normal; 
+  margin-bottom: -5px; 
 }
+
 
 /* Tema chiaro */
             body.light-mode {
@@ -372,10 +447,11 @@ line-height: normal;
             body.light-mode .nav a,
             body.light-mode .nav span,
             body.light-mode .frase-intro,
-            body.light-mode .project-title,
+            body.light-mode .project-title-collection,
             body.light-mode .title-section,
             body.light-mode .footer-text,
-            body.light-mode .project-description {
+            body.light-mode .title-section-about,
+            body.light-mode .project-description-collection {
               color: black;  /* Imposta il colore del testo in modalità chiara */
             }
 
@@ -388,8 +464,8 @@ line-height: normal;
             body .nav a,
             body .nav span,
             body .frase-intro,
-            body .project-title,
-            body .project-description {
+            body .project-title-collection,
+            body .project-description-collection {
               color: white; /* Imposta il colore del testo in modalità scura */
             }
 
@@ -414,9 +490,6 @@ line-height: normal;
               color: #0F0;
               text-decoration: underline;
             }
-
-
-
 
 
 
