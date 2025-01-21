@@ -52,3 +52,32 @@ function changeLanguage() {
 
 // Cambiamo la lingua ogni 600ms
 setInterval(changeLanguage, 600);
+
+
+
+//modalità chiaro scuro
+// Controlla se c'è una preferenza di tema salvata nel localStorage
+document.addEventListener('DOMContentLoaded', function() {
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');  // Imposta il tema chiaro
+  } else {
+    document.body.classList.remove('light-mode');  // Tema scuro di default
+  }
+})
+// Aggiungi un event listener per il clic sulla pagina
+document.addEventListener('click', function(event) {
+  // Verifica se l'elemento cliccato è un link, un tasto o un progetto (project-section)
+  if (event.target.tagName !== 'A' && !event.target.closest('button') && !event.target.closest('.project-section')) {
+    // Se il tema è light-mode, cambia a dark
+    if (document.body.classList.contains('light-mode')) {
+      document.body.classList.remove('light-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.add('light-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+});
+
