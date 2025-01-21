@@ -68,9 +68,9 @@ if (!projectId) {
       // Inserisce i dettagli del progetto
       document.getElementById('single-project-title').textContent = progetto.titolo_progetto;
       document.getElementById('single-project-text').textContent = progetto.descrizione_completa;
-      document.getElementById('single-project-committente').textContent = `Committente: ${progetto.committente}`;
-      document.getElementById('single-project-anno').textContent = `Anno: ${progetto.anno}`;
-      document.getElementById('single-project-categoria').textContent = `Categoria: ${progetto.categoria}`;
+      document.getElementById('single-project-committente').textContent = progetto.committente;
+      document.getElementById('single-project-anno').textContent = progetto.anno;
+      document.getElementById('single-project-categoria').textContent = progetto.categoria;
 
       // Aggiunge le immagini verticalmente nella galleria
       const galleryContainer = document.querySelector('.container-single-project-gallery');
@@ -87,6 +87,23 @@ if (!projectId) {
     });
 }
 
+document.addEventListener('scroll', () => {
+  const description = document.getElementById('onyx-project-description');
+  const nav = document.querySelector('.nav');
+
+  const descriptionBottom = description.getBoundingClientRect().bottom;
+  const navBottom = nav.getBoundingClientRect().bottom;
+
+  const margin = 20; // Distanza desiderata dalla nav
+
+  if (descriptionBottom <= navBottom + margin) {
+    description.style.position = 'absolute';
+    description.style.top = `${window.scrollY + navBottom + margin}px`;
+  } else {
+    description.style.position = 'sticky';
+    description.style.top = `${margin + 100}px`; // Somma il margine alla distanza dal bordo superiore
+  }
+});
 
 
   

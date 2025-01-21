@@ -113,6 +113,7 @@
 /* Stili globali */
 body {
   margin: 1.5rem;
+  margin-bottom: 0rem;
   padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -128,7 +129,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 1.5rem); /* 100% dell'altezza della finestra meno i margini del body */
-  padding-bottom: 50px; /* Aggiunge spazio per il footer */
   }
 /* Il contenuto principale si espande per occupare tutto lo spazio disponibile */
 .main-content {
@@ -159,18 +159,19 @@ body:hover::after {
   top: calc(var(--mouse-y) - 15px);
   left: calc(var(--mouse-x) - 15px);
 }
-/* Contenitore nav */
+
 .nav {
+  background-color: #000;
   display: grid;
   column-gap: 20px;
   row-gap: 0px;
   align-items: center;
-  background-color: black;
-  height: 65px;  /*Altezza della barra */
-  z-index: 1000; /* Porta la barra di navigazione al livello più alto */
-  width: 100%; /* Occupa tutta la larghezza dello schermo */
-  top: 0; /* Mantiene la barra in alto */
-  position: fixed; /* Cambiato da sticky a fixed */
+  height: 50px;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  color: white;
 }
 
 /* Stile generale per gli elementi di navigazione */
@@ -180,10 +181,11 @@ body:hover::after {
   font-family: "Suisse Int'l";
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 160%;
   text-decoration-line: none;
   text-transform: none;
+  opacity: 1;
 }
 
 .nav span {
@@ -235,12 +237,12 @@ body:hover::after {
 }
 
 .header {
-  margin-top: 100px;
+  margin-top: 130px;
   margin-bottom: 100px;
 }
 .header-about {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 130px;
+  margin-bottom: 70px;
 }
 
 .frase-intro {
@@ -248,7 +250,7 @@ body:hover::after {
   font-family: "Suisse Int'l";
   font-size: 65px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 110%;
 }
 
@@ -256,6 +258,7 @@ body:hover::after {
   margin-bottom: -20px;
   transition: opacity 0.5s ease-in-out;
 }
+
 
 @keyframes changeLanguage {
   0% {
@@ -275,15 +278,13 @@ h1 {
 }
 
 .title-section, 
-.title-section-about,
-.project-title-collection,
-.single-project-title {
+.title-section-about {
   color: #FFF;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
-  text-transform: lowercase;
+  text-transform: uppercase;
   text-decoration: none; /* Rimuove la sottolineatura */
 
 }
@@ -319,12 +320,11 @@ a:hover {
 
 /* modifica titolo collezione*/
 .project-title-collection {
-  color: #ff0000;
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
-  text-transform: lowercase;
+  text-transform: none;
   text-decoration: none; /* Rimuove la sottolineatura */
   color: inherit; /* Eredita il colore del testo normale, per evitare il viola */
   text-decoration: none; /* Rimuove la sottolineatura */
@@ -336,21 +336,20 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
-  row-gap: 20px;
 }
 
 .box-project-collection {
   grid-column: span 6;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 
 
 .project-description-collection {
   color: #FFF;
-  font-size: 15px;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 200;
   text-decoration: none; /* Rimuove la sottolineatura */
   color: inherit; /* Eredita il colore del testo normale, per evitare il viola */
 }
@@ -369,15 +368,15 @@ a:hover {
 .preview-project img:hover {
   border: 2px solid white; /* Aggiungi il bordo bianco durante l'hover */
   transform: scale(1.05); /* Ingrandisci leggermente l'immagine */
-  filter: blur(3px); /* Aggiungi l'effetto blur */
+  filter: blur(100px); /* Aggiungi l'effetto blur */
 }
 
 /* about pagina*/
 .frase-about{
 font-size: 40px;
 font-style: normal;
-font-weight: 600;
-line-height: 52px; /* 130% */
+font-weight: 400;
+line-height: 120%;
 }
 
 .grid-container-about{
@@ -385,6 +384,8 @@ line-height: 52px; /* 130% */
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
   row-gap: 20px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .section-education{
@@ -399,8 +400,8 @@ line-height: 52px; /* 130% */
 .text-section-about{
 font-size: 13px;
 font-style: normal;
-font-weight: 500;
-line-height: 140%;
+font-weight: 400;
+line-height: 150%;
 margin-top: 20px;
 margin-bottom: 20px;
 }
@@ -411,6 +412,8 @@ margin-bottom: 20px;
   grid-template-columns: repeat(12, 1fr); /* 12 colonne */
   column-gap: 20px;
   row-gap: 20px;
+  padding-bottom: 50px; /* Margine sufficiente per il footer */
+  
 }
 
 .container-single-project-description {
@@ -428,9 +431,10 @@ margin-bottom: 20px;
   display: flex;
   flex-direction: column; /* Allineamento verticale */
   row-gap: 20px; /* Spazio tra le righe */
-  max-height: 70vh; /* Limita l'altezza della galleria */
-  overflow-y: auto; /* Scroll verticale */
+  /* max-height: 70vh; Limita l'altezza della galleria */
   padding-right: 10px; /* Spazio a destra */
+  overflow-y: auto; /* Abilita lo scrolling */
+
 }
 
 .container-single-project-gallery img {
@@ -440,6 +444,15 @@ margin-bottom: 20px;
   top: 0;
 }
 
+.container-single-project-description {
+  grid-column: 1 / 5;
+  position: sticky;
+  top: 50px; /* Altezza della nav o margine che desideri */
+  z-index: 10;
+  padding-bottom: 20px; /* Distanza tra descrizione e galleria */
+  max-height: calc(100vh - 50px); /* Limita l'altezza al viewport meno la nav */
+  overflow-y: auto; /* Consente lo scrolling interno se necessario */
+}
 
 .preview-image {
   width: 100%; /* Adatta la larghezza al contenitore */
@@ -460,22 +473,32 @@ margin-bottom: 20px;
 
 
 .single-project-title {
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
+  text-transform: uppercase;
 }
+
 
 .single-project-text {
-margin-top: 40px;
-font-size: 16px;
+margin-top: 20px;
+font-size: 14px;
 font-weight: 400;
-line-height: 150%;
-letter-spacing: 0.2px;
-margin-bottom: 40px;
-
+line-height: 160%;
+letter-spacing: 0.5px;
+margin-bottom: 20px;
 }
 
+
+.single-project-anno,
+.single-project-committente,
+.single-project-categoria {
+font-size: 14px;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: 0.5px;
+}
 
 
 
@@ -486,22 +509,20 @@ margin-bottom: 40px;
   text-align: center; /* Allinea il contenuto al centro */
   text-align: center;
   background-color: black; /* Colore di sfondo */
-  position: fixed; /* Rende il footer fisso */
-  bottom: 0; /* Fissa il footer nella parte inferiore */
   left: 0; /* Allinea il footer a sinistra */
   width: 100%; /* Assicura che occupi tutta la larghezza */
   z-index: 1000; /* Porta il footer sopra gli altri elementi */
   display: flex; /* Utilizza Flexbox per l'allineamento */
   justify-content: center; /* Centra orizzontalmente */
   align-items: center; /* Centra verticalmente */
-  border-top: 1px solid white; /* Filetto bianco in alto */
-
+  border-top: 0.5px solid rgb(164, 164, 164); /* Filetto bianco in alto */
+bottom: 0;
 }
 
 .footer-text {
   color: #FFF; 
-  font-size: 10px; 
-  font-weight: 400;
+  font-size: 9px; 
+  font-weight: 200;
   line-height: normal; 
   background-color: black; /* Colore di sfondo */
   margin-top: 0px;
@@ -516,18 +537,21 @@ body {
   color: white;
 }
 
-body .nav, body .footer, body .project-title-collection, body .project-description-collection, body .frase-intro, body .single-project-title, body .single-project-text, body .footer-text {
+body .nav, body .footer, body .project-title-collection, body .project-description-collection, body .frase-intro, body .single-project-title, body .single-project-text {
   color: white; /* Colore del testo in modalità scura */
 }
 
-body .nav {
-  background-color: black; /* Colore di sfondo della nav */
+body .footer-text{
+  color:  rgb(206, 206, 206); /* Filetto bianco in alto */ /* Colore del testo in modalità scura */
 }
+
+/* body .nav {
+  background-color: black; /* Colore di sfondo della nav 
+} */
 
 body .footer {
   background-color: black; /* Colore di sfondo del footer */
 }
-
 /* Tema chiaro (modalità attivata dopo il click) */
 body.light-mode {
   background-color: white;
@@ -551,17 +575,26 @@ body.light-mode .footer {
 }
 
 body.light-mode .nav {
-  background-color: white; /* Colore di sfondo della nav in modalità chiara */
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgb(255, 255, 255); /* bordo interno sfocato e trasparente */
 }
 
 body.light-mode .nav a,
 body.light-mode .nav span {
-  color: black;  /* Colore dei link nella nav in modalità chiara */
+  color: rgb(0, 0, 0);  /* Colore rosso per i link nella nav in modalità chiara */
 }
 
-body.light-mode .nav a:hover {
-  color: #0F0;  /* Colore hover per i link */
+body.light-mode .nav a:hover,
+body.light-mode .nav span:hover {
+  color: rgb(32, 241, 0);  /* Colore rosso per i link nella nav in modalità chiara */
 }
+
+body.light-mode #roberta-valli-link-nav, body.light-mode #about-link-nav, 
+body.light-mode #project-link-nav  {
+  color: rgb(32, 241, 0);  /* Colore rosso per i link nella nav in modalità chiara */
+  text-decoration: underline;
+}
+
 
 body.light-mode .project-title-collection,
 body.light-mode .project-description-collection {
@@ -569,73 +602,16 @@ body.light-mode .project-description-collection {
 }
 
 body.light-mode .project-link {
-  color: #FF6347; /* Colore per i link specifici in modalità chiara */
+  color: #000000; /* Colore per i link specifici in modalità chiara */
 }
 
 body.light-mode .project-description-collection a:hover {
-  color: #0F0;  /* Colore hover per i link in modalità chiara */
+  color: rgb(0, 255, 0);  /* Colore hover per i link in modalità chiara */
 }
 
 
-            
-
-/* Responsività per schermi più piccoli */
-@media (max-width: 1200px) {
-  .nav {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  #roberta-valli {
-    grid-column: span 3;
-  }
-
-  .nav a:nth-child(2) {
-    grid-column: span 2;
-  }
-
-  .nav a:nth-child(3) {
-    grid-column: span 2;
-  }
-
-  .nav a:nth-child(4) {
-    grid-column: span 2;
-  }
-
-  .nav a:nth-child(5) {
-    grid-column: span 2;
-  }
+body.light-mode .title-section-about {
+  color: #000000; /* Colore per i link specifici in modalità chiara */
 }
+    
 
-@media (max-width: 768px) {
-  .nav {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #roberta-valli {
-    grid-column: span 3;
-  }
-
-  .nav a:nth-child(2),
-  .nav a:nth-child(3) {
-    grid-column: span 3;
-  }
-
-  .nav a:nth-child(4),
-  .nav a:nth-child(5) {
-    grid-column: span 3;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav {
-    grid-template-columns: 1fr;
-  }
-
-  #roberta-valli {
-    grid-column: span 1;
-  }
-
-  .nav a {
-    grid-column: span 1;
-  }
-}

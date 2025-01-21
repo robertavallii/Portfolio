@@ -51,7 +51,7 @@ function changeLanguage() {
 }
 
 // Cambiamo la lingua ogni 600ms
-setInterval(changeLanguage, 600);
+setInterval(changeLanguage, 400);
 
 
 
@@ -81,3 +81,18 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
+
+let lastScrollY = window.scrollY; // Posizione iniziale dello scroll
+const wrapper = document.querySelector('.wrapper'); // Seleziona il wrapper della navbar
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        // Scroll verso il basso
+        wrapper.classList.add('hidden');
+    } else {
+        // Scroll verso l'alto
+        wrapper.classList.remove('hidden');
+    }
+    lastScrollY = window.scrollY; // Aggiorna la posizione corrente dello scroll
+});

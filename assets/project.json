@@ -1,9 +1,13 @@
 [
   {
     "id": 1,
-    "titolo_progetto": "ONYX",
+    "titolo_progetto": "Onyx",
     "descrizione_progetto": "Brand Identity - User Interface - User Experience",
     "immagini": [
+      {
+        "url": "assets/immagini_progetti/01_onyx/01_onyx_image_08.jpg"
+      },
+
       {
         "url": "assets/immagini_progetti/01_onyx/01_onyx_image_01.jpg"
       },
@@ -11,25 +15,72 @@
         "url": "assets/immagini_progetti/01_onyx/01_onyx_image_02.jpg"
       },
       {
-        "url": "assets/immagini_progetti/01_onyx/01_onyx_image_03.jpg"
+        "url": "assets/immagini_progetti/01_onyx/01_onyx_image_06.jpg"
       },
       {
         "url": "assets/immagini_progetti/01_onyx/01_onyx_image_04.jpg"
       },
       {
         "url": "assets/immagini_progetti/01_onyx/01_onyx_image_05.jpg"
-      },
+      } ,
       {
-        "url": "assets/immagini_progetti/01_onyx/01_onyx_image_06.jpg"
-
-      }
-      
+        "url": "assets/immagini_progetti/01_onyx/01_onyx_image_07.jpg"
+      } 
     ],
     "descrizione_completa": "ONYX is an imaginary fashion brand, conceived in a dystopian future set in the year 2100, where climate catastrophes have become the new normal. In this scenario, ONYX was born as a response to the need to survive and adapt to a hostile world by offering durable, functional and distinctively designed garments. After the first phase of development and conception of the brand and visual identity, there followed a phase of experimentation with AI, used for the creation of all the images and videos. The project was an opportunity to combine the designer's creativity with the potential of artificial intelligence, exploring new dimensions.",
     "committente": "SUPSI",
     "anno": "2024-2025",
     "categoria": "Brand Identity - User Interface - User Experience"
   },
+
+
+
+  {
+    "id": 5,
+    "titolo_progetto": "Face AI",
+    "descrizione_progetto": "Interaction Design - User Interface",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/05_face_ai/face_ai_01.jpg"
+      } ,   {
+        "url": "assets/immagini_progetti/05_face_ai/face_ai_02.jpg"
+      }
+    ],
+    "descrizione_completa": "Face AI is a project that explores the use of artificial intelligence to analyse and catalogue human faces, using around 20,000 photographs taken with my iPhone over the years. Employing technologies such as YOLO and Face Detect, the project identifies and analyses faces in terms of gender, age and facial expressions. The simple and intuitive interface allows users to filter images and view additional details via an interactive popup. Designed as a personal archive, it offers an innovative way to explore and organise faces and facial features in a fluid and functional way.",
+    "committente": "SUPSI",
+    "anno": "2024",
+    "categoria": "Interaction Design - User Interface"
+  },
+
+
+
+  {
+    "id": 3,
+    "titolo_progetto": "Semester website",
+    "descrizione_progetto": "User Interface - Coding",
+    "immagini": [
+      {
+        "url": "assets/immagini_progetti/04_SEMSTETER_02/semester_05.jpg"
+      },    
+      {
+        "url": "assets/immagini_progetti/04_SEMSTETER_02/semester_01.jpg"
+      },
+      {
+        "url": "assets/immagini_progetti/04_SEMSTETER_02/semester_02.jpg"
+      },
+      {
+        "url": "assets/immagini_progetti/04_SEMSTETER_02/semester_03.jpg"
+      },
+      {
+        "url": "assets/immagini_progetti/04_SEMSTETER_02/semester_04.jpg"
+      }
+    ],
+    "descrizione_completa": "A responsive website created to represent the SEMESTER magazine, to communicate the mood of the project and tell its main contents. Designed to be usable on desktop and mobile, the site is divided into different sections showing the works realised, describing the identity of the magazine and highlighting the contributions of the participants. The site is designed to offer simple and direct access to the contents, accompanying users in their discovery of SEMESTER.",
+    "committente": "SUPSI",
+    "anno": "2024-2025",
+    "categoria": "User Interface - Coding"
+  },
+
   {
     "id": 2,
     "titolo_progetto": "Photography Events website",
@@ -44,29 +95,30 @@
     "anno": "2024",
     "categoria": "User Interface"
   },
+  
+
+
   {
-    "id": 3,
-    "titolo_progetto": "Semester website",
-    "descrizione_progetto": "User Interface - Coding",
+    "id": 6,
+    "titolo_progetto": "Amnesia",
+    "descrizione_progetto": "Corporate - Brand Identity",
     "immagini": [
-      {
-        "url": "assets/immagini_progetti/04_semester/semester_01.jpg"
-      },      {
-        "url": "assets/immagini_progetti/04_semester/semester_02.jpg"
-      },      {
-        "url": "assets/immagini_progetti/04_semester/semester_03.jpg"
-      },      {
-        "url": "assets/immagini_progetti/04_semester/semester_04.jpg"
-      }
-    ],
-    "descrizione_completa": "A responsive website created to represent the SEMESTER magazine, to communicate the mood of the project and tell its main contents. Designed to be usable on desktop and mobile, the site is divided into different sections showing the works realised, describing the identity of the magazine and highlighting the contributions of the participants. The site is designed to offer simple and direct access to the contents, accompanying users in their discovery of SEMESTER.",
+      {"url": "assets/immagini_progetti/03_amnesia/amnesia1.jpg"},
+      {"url": "assets/immagini_progetti/03_amnesia/amnesia4.jpg"},
+      {"url": "assets/immagini_progetti/03_amnesia/amnesia2.jpg"},
+      {"url": "assets/immagini_progetti/03_amnesia/amnesia3.jpg"},
+      {"url": "assets/immagini_progetti/03_amnesia/amnesia5.jpg"}
+       ],
+    "descrizione_completa": "Amnesia is a branding project for a vodka inspired by a superpower: ‘drinking to forget’. The project involved the creation of the entire brand identity, starting with the concept and the development of vision, mission and values. Subsequently, the visual elements were created, such as the logo, colours, typeface and communication artefacts, including the landing page, packaging and promotional material. The objective was to create a brand that embodied the superpower of forgetting, with a distinctive and consistent design that would tell a unique and memorable experience.",
     "committente": "SUPSI",
-    "anno": "2024-2025",
-    "categoria": "User Interface - Coding"
+    "anno": "2024",
+    "categoria": "Corporate - Brand Identity"
   },
+
+
   {
     "id": 4,
-    "titolo_progetto": "DESIGN HUB",
+    "titolo_progetto": "Design Hub",
     "descrizione_progetto": "User Interface",
     "immagini": [
       {
@@ -81,36 +133,8 @@
     "committente": "SUPSI",
     "anno": "2023",
     "categoria": "User Interface"
-  },
-  {
-    "id": 5,
-    "titolo_progetto": "Face AI",
-    "descrizione_progetto": "Interaction Design - User Interface",
-    "immagini": [
-      {
-        "url": "assets/immagini_progetti/immagine_prova_01.jpg"
-      }
-    ],
-    "descrizione_completa": "Face AI is a project that explores the use of artificial intelligence to analyse and catalogue human faces, using around 20,000 photographs taken with my iPhone over the years. Employing technologies such as YOLO and Face Detect, the project identifies and analyses faces in terms of gender, age and facial expressions. The simple and intuitive interface allows users to filter images and view additional details via an interactive popup. Designed as a personal archive, it offers an innovative way to explore and organise faces and facial features in a fluid and functional way.",
-    "committente": "SUPSI",
-    "anno": "2024",
-    "categoria": "Interaction Design - User Interface"
-  },
-  {
-    "id": 6,
-    "titolo_progetto": "Amnesia",
-    "descrizione_progetto": "Corporate - Brand Identity",
-    "immagini": [
-      {"url": "assets/immagini_progetti/03_amnesia/photography_event.jpg"},
-      {"url": "assets/immagini_progetti/03_amnesia/photography_event-3.jpg"},
-      {"url": "assets/immagini_progetti/03_amnesia/photography_event-2.jpg"},
-      {"url": "assets/immagini_progetti/03_amnesia/photography_event-1.jpg"},
-      {"url": "assets/immagini_progetti/03_amnesia/photography_event-4.jpg"}
-
-    ],
-    "descrizione_completa": "Amnesia is a branding project for a vodka inspired by a superpower: ‘drinking to forget’. The project involved the creation of the entire brand identity, starting with the concept and the development of vision, mission and values. Subsequently, the visual elements were created, such as the logo, colours, typeface and communication artefacts, including the landing page, packaging and promotional material. The objective was to create a brand that embodied the superpower of forgetting, with a distinctive and consistent design that would tell a unique and memorable experience.",
-    "committente": "SUPSI",
-    "anno": "2024",
-    "categoria": "Corporate - Brand Identity"
   }
 ]
+
+
+  
