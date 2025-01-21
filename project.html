@@ -43,7 +43,7 @@
   
 
 
-  // Recupera l'ID del progetto dalla query string
+  //  prende id proj dalla query string
 const params = new URLSearchParams(window.location.search);
 const projectId = params.get('id');
 
@@ -65,14 +65,14 @@ if (!projectId) {
         return;
       }
 
-      // Inserisce i dettagli del progetto
+      // inserimento dati proj
       document.getElementById('single-project-title').textContent = progetto.titolo_progetto;
       document.getElementById('single-project-text').textContent = progetto.descrizione_completa;
       document.getElementById('single-project-committente').textContent = progetto.committente;
       document.getElementById('single-project-anno').textContent = progetto.anno;
       document.getElementById('single-project-categoria').textContent = progetto.categoria;
 
-      // Aggiunge le immagini verticalmente nella galleria
+      // immagini gallery scroll
       const galleryContainer = document.querySelector('.container-single-project-gallery');
       progetto.immagini.forEach(img => {
         const imgElement = document.createElement('img');
@@ -94,14 +94,14 @@ document.addEventListener('scroll', () => {
   const descriptionBottom = description.getBoundingClientRect().bottom;
   const navBottom = nav.getBoundingClientRect().bottom;
 
-  const margin = 20; // Distanza desiderata dalla nav
+  const margin = 20; // distanza da nav blocco
 
   if (descriptionBottom <= navBottom + margin) {
     description.style.position = 'absolute';
     description.style.top = `${window.scrollY + navBottom + margin}px`;
   } else {
     description.style.position = 'sticky';
-    description.style.top = `${margin + 100}px`; // Somma il margine alla distanza dal bordo superiore
+    description.style.top = `${margin + 100}px`; // margine + bordo superiore per distanza
   }
 });
 

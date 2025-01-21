@@ -1,18 +1,18 @@
-// Mouse tracking
+// mouse
 document.addEventListener('mousemove', function(e) {
   document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px');
   document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px');
 });
 
-// Seleziona l'elemento con classe 'circle'
+
 const circle = document.querySelector('.circle');
 
 function updateCirclePosition() {
-  // Ottieni la posizione del mouse tramite le variabili CSS
+  // posizione del mouse
   const mouseX = getComputedStyle(document.documentElement).getPropertyValue('--mouse-x');
   const mouseY = getComputedStyle(document.documentElement).getPropertyValue('--mouse-y');
   
-  // Posiziona il cerchio utilizzando i valori delle variabili CSS
+  // cerchio sopra mouse
   circle.style.left = mouseX;
   circle.style.top = mouseY;
 }
@@ -20,6 +20,9 @@ function updateCirclePosition() {
 // Aggiorna la posizione del cerchio alla posizione del mouse ogni 10ms
 setInterval(updateCirclePosition, 10);
 
+
+
+// lingua ciao
 let languages = [
   'Ciao!',            // Italiano
   '¡Hola!',           // Spagnolo
@@ -38,25 +41,21 @@ let languages = [
   '你好!',             // Cinese (Mandarino)
 ];
 
-let currentLangIndex = 0; // Partiamo dalla lingua "Hello!"
+let currentLangIndex = 0; 
 
 function changeLanguage() {
   const helloElement = document.getElementById('hello');
   
-  // Cambia il testo a una lingua successiva
   helloElement.textContent = languages[currentLangIndex];
   
-  // Aumenta l'indice per la lingua successiva, ciclando attraverso le lingue
-  currentLangIndex = (currentLangIndex + 1) % languages.length; // Ciclo sulle lingue
+  currentLangIndex = (currentLangIndex + 1) % languages.length; // ciclo  lingue
 }
-
-// Cambiamo la lingua ogni 600ms
+// tempo 
 setInterval(changeLanguage, 400);
 
 
 
 //modalità chiaro scuro
-// Controlla se c'è una preferenza di tema salvata nel localStorage
 document.addEventListener('DOMContentLoaded', function() {
   const savedTheme = localStorage.getItem('theme');
 
@@ -66,11 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.remove('light-mode');  // Tema scuro di default
   }
 })
-// Aggiungi un event listener per il clic sulla pagina
+// cambio al click
 document.addEventListener('click', function(event) {
-  // Verifica se l'elemento cliccato è un link, un tasto o un progetto (project-section)
   if (event.target.tagName !== 'A' && !event.target.closest('button') && !event.target.closest('.project-section')) {
-    // Se il tema è light-mode, cambia a dark
+    // alternato
     if (document.body.classList.contains('light-mode')) {
       document.body.classList.remove('light-mode');
       localStorage.setItem('theme', 'dark');
@@ -82,17 +80,17 @@ document.addEventListener('click', function(event) {
 });
 
 
-
-let lastScrollY = window.scrollY; // Posizione iniziale dello scroll
-const wrapper = document.querySelector('.wrapper'); // Seleziona il wrapper della navbar
+// scroll progetto singolo
+let lastScrollY = window.scrollY; 
+const wrapper = document.querySelector('.wrapper'); 
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > lastScrollY) {
-        // Scroll verso il basso
-        wrapper.classList.add('hidden');
+
+      wrapper.classList.add('hidden');
     } else {
-        // Scroll verso l'alto
-        wrapper.classList.remove('hidden');
+
+      wrapper.classList.remove('hidden');
     }
-    lastScrollY = window.scrollY; // Aggiorna la posizione corrente dello scroll
+    lastScrollY = window.scrollY; 
 });

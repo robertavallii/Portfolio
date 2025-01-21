@@ -27,7 +27,6 @@
     <h2 class="title-section">project</h2>
    
     <project class="project-section">
-      <!-- I progetti verranno inseriti qui dinamicamente -->
     </project>
 
   </div>
@@ -39,7 +38,8 @@
   </footer>
 
   <script>
-    // Carica dinamicamente i progetti dal file JSON
+
+    // x caricare dinamicamnete contenuti json
     fetch('assets/project.json')
       .then(response => response.json())
       .then(data => {
@@ -48,7 +48,7 @@
           const projectBox = document.createElement('div');
           projectBox.classList.add('box-project-collection');
           
-          // Genera il contenuto del progetto
+          // generazione tsti progetto
           projectBox.innerHTML = `
   <div id="project-box-${progetto.id}" class="box-project-collection">
     <a href="project.html?id=${progetto.id}"> 
@@ -59,7 +59,7 @@
   </div>
 `;
           
-          // Aggiungi il box del progetto alla sezione
+          //box sezione
           projectSection.appendChild(projectBox);
         });
       })

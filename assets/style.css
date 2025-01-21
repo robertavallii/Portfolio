@@ -110,7 +110,6 @@
   font-style: italic;
 }
 
-/* Stili globali */
 body {
   margin: 1.5rem;
   margin-bottom: 0rem;
@@ -118,25 +117,21 @@ body {
   font-family: Arial, sans-serif;
   box-sizing: border-box;
   background-color: black;
-  cursor: none; /* Rimuoviamo il cursore di default */
+  cursor: none; 
   font-family: "Suisse Int'l";
-  /* transition: background-color 0.3s, color 0.3s; */
 }
 
 
-/* Contenitore principale */
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 1.5rem); /* 100% dell'altezza della finestra meno i margini del body */
+  min-height: calc(100vh - 1.5rem); 
   }
-/* Il contenuto principale si espande per occupare tutto lo spazio disponibile */
 .main-content {
   flex: 1;
 }
 
 
-/* Tema chiaro */
 body.light-mode {
   background-color: white;
   color: black;
@@ -152,7 +147,7 @@ body::after {
   pointer-events: none;
   transition: transform 0.1s ease;
   mix-blend-mode: exclusion;
-  z-index: 9999; /* Assicurati che il cerchio sia sempre sopra gli altri elementi */
+  z-index: 9999; 
 }
 
 body:hover::after {
@@ -174,7 +169,6 @@ body:hover::after {
   color: white;
 }
 
-/* Stile generale per gli elementi di navigazione */
 .nav a,
 .nav span {
   color: #ffffff;
@@ -285,37 +279,36 @@ h1 {
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  text-decoration: none; /* Rimuove la sottolineatura */
+  text-decoration: none; 
 
 }
 
 
 a {
-  text-decoration: none; /* Rimuove la sottolineatura */
-  color: inherit; /* Eredita il colore dal testo */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 a:visited {
-  color: inherit; /* Impedisce che il link cambi colore dopo essere stato visitato */
+  color: inherit;
 }
 
-/* Stile per il link quando il mouse è sopra (hover) */
 a:hover {
-  text-decoration: none; /* Rende il link sottolineato al passaggio del mouse */
-  color: #0F0; /* Puoi scegliere un colore personalizzato */
+  text-decoration: none; 
+  color: #0F0; 
 }
 
 /* Rimuovi la sottolineatura e il viola sotto specifici elementi */
 .project-title-collection a,
 .project-description-collection a {
-  text-decoration: none; /* Rimuove la sottolineatura */
-  color: inherit; /* Mantieni il colore del testo */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .project-title-collection a:hover,
 .project-description-collection a:hover {
-  text-decoration: none; /* Aggiunge sottolineatura solo su hover */
-  color: #0F0; /* Colore hover verde */
+  text-decoration: none; 
+  color: #0F0; 
 }
 
 /* modifica titolo collezione*/
@@ -325,9 +318,9 @@ a:hover {
   font-weight: 400;
   line-height: normal;
   text-transform: none;
-  text-decoration: none; /* Rimuove la sottolineatura */
-  color: inherit; /* Eredita il colore del testo normale, per evitare il viola */
-  text-decoration: none; /* Rimuove la sottolineatura */
+  text-decoration: none; 
+  color: inherit; 
+  text-decoration: none; 
 
 
 }
@@ -350,8 +343,8 @@ a:hover {
   font-size: 12px;
   font-style: normal;
   font-weight: 200;
-  text-decoration: none; /* Rimuove la sottolineatura */
-  color: inherit; /* Eredita il colore del testo normale, per evitare il viola */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .project-section img {
@@ -361,14 +354,14 @@ a:hover {
 }
 
 .preview-project {
-  margin-bottom: 100px; /* Margine inferiore */
+  margin-bottom: 100px; 
 }
 
 
 .preview-project img:hover {
-  border: 2px solid white; /* Aggiungi il bordo bianco durante l'hover */
-  transform: scale(1.05); /* Ingrandisci leggermente l'immagine */
-  filter: blur(100px); /* Aggiungi l'effetto blur */
+  border: 2px solid white; 
+  transform: scale(1.05); 
+  filter: blur(100px); 
 }
 
 /* about pagina*/
@@ -389,11 +382,11 @@ line-height: 120%;
 }
 
 .section-education{
-  grid-column: 7 / 10; /* Dalla colonna 8 alla colonna 10 (esclusa la 10) */
+  grid-column: 7 / 10; 
 }
 
 .section-work {
-  grid-column: 10 / 14; /* Dalla colonna 8 alla colonna 10 (esclusa la 10) */
+  grid-column: 10 / 14; 
 
 }
 
@@ -409,64 +402,64 @@ margin-bottom: 20px;
 /* Sezione progetti singoli */
 .container-single-project {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 colonne */
+  grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
   row-gap: 20px;
-  padding-bottom: 50px; /* Margine sufficiente per il footer */
+  padding-bottom: 50px; 
   
 }
 
 .container-single-project-description {
   grid-column: 1 / 5;
-  position: sticky; /* Questo farà sì che la descrizione resti visibile durante lo scroll */
-  top: 0; /* Fissa la descrizione in alto */
-  z-index: 10; /* Assicurati che sia sopra la galleria */
-  padding-bottom: 20px; /* Distanza tra la descrizione e la galleria */
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+  padding-bottom: 20px; 
 }
 
 
 
 .container-single-project-gallery {
-  grid-column: 6 / 13; /* Posizionamento nella griglia */
+  grid-column: 6 / 13; 
   display: flex;
-  flex-direction: column; /* Allineamento verticale */
-  row-gap: 20px; /* Spazio tra le righe */
+  flex-direction: column; 
+  row-gap: 20px;
   /* max-height: 70vh; Limita l'altezza della galleria */
-  padding-right: 10px; /* Spazio a destra */
-  overflow-y: auto; /* Abilita lo scrolling */
+  padding-right: 10px; 
+  overflow-y: auto; 
 
 }
 
 .container-single-project-gallery img {
-  width: 100%; /* Adatta la larghezza al contenitore */
-  height: auto; /* Mantieni proporzioni */
-  display: block; /* Evita sovrapposizioni */
+  width: 100%; 
+  height: auto; 
+  display: block; 
   top: 0;
 }
 
 .container-single-project-description {
   grid-column: 1 / 5;
   position: sticky;
-  top: 50px; /* Altezza della nav o margine che desideri */
+  top: 50px; 
   z-index: 10;
-  padding-bottom: 20px; /* Distanza tra descrizione e galleria */
-  max-height: calc(100vh - 50px); /* Limita l'altezza al viewport meno la nav */
-  overflow-y: auto; /* Consente lo scrolling interno se necessario */
+  padding-bottom: 20px; 
+  max-height: calc(100vh - 50px); 
+  overflow-y: auto; 
 }
 
 .preview-image {
-  width: 100%; /* Adatta la larghezza al contenitore */
-  height: auto; /* Mantieni proporzioni */
-  display: block; /* Evita sovrapposizioni */
+  width: 100%; 
+  height: auto; 
+  display: block; 
   top: 0;
-  transition: border 0.3s ease, transform 0.3s ease; /* Transizione per bordo e trasformazione */
-  border: 2px solid transparent; /* Bordo inizialmente invisibile */
+  transition: border 0.3s ease, transform 0.3s ease; 
+  border: 2px solid transparent; 
 }
 
 .container-single-project-gallery img:first-child {
-  position: sticky; /* Rende la prima immagine "fissa" durante lo scroll */
-  top: 0; /* La fissa in cima al contenitore */
-  z-index: 10; /* Assicura che la prima immagine stia sopra alle altre */
+  position: sticky; 
+  top: 0; 
+  z-index: 10;
 
 }
 
@@ -504,18 +497,18 @@ letter-spacing: 0.5px;
 
 /* footer */
 .footer {
-  margin-top: 50px; /* Aggiunge uno spazio sopra il footer */
+  margin-top: 50px; 
   height: 30px;
-  text-align: center; /* Allinea il contenuto al centro */
+  text-align: center; 
   text-align: center;
-  background-color: black; /* Colore di sfondo */
-  left: 0; /* Allinea il footer a sinistra */
-  width: 100%; /* Assicura che occupi tutta la larghezza */
-  z-index: 1000; /* Porta il footer sopra gli altri elementi */
-  display: flex; /* Utilizza Flexbox per l'allineamento */
-  justify-content: center; /* Centra orizzontalmente */
-  align-items: center; /* Centra verticalmente */
-  border-top: 0.5px solid rgb(164, 164, 164); /* Filetto bianco in alto */
+  background-color: black; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  border-top: 0.5px solid rgb(164, 164, 164); 
 bottom: 0;
 }
 
@@ -524,7 +517,7 @@ bottom: 0;
   font-size: 9px; 
   font-weight: 200;
   line-height: normal; 
-  background-color: black; /* Colore di sfondo */
+  background-color: black; 
   margin-top: 0px;
   margin-bottom: 0px;
 letter-spacing: 0.5px;
@@ -538,11 +531,11 @@ body {
 }
 
 body .nav, body .footer, body .project-title-collection, body .project-description-collection, body .frase-intro, body .single-project-title, body .single-project-text {
-  color: white; /* Colore del testo in modalità scura */
+  color: white; 
 }
 
 body .footer-text{
-  color:  rgb(206, 206, 206); /* Filetto bianco in alto */ /* Colore del testo in modalità scura */
+  color:  rgb(206, 206, 206); 
 }
 
 /* body .nav {
@@ -550,9 +543,9 @@ body .footer-text{
 } */
 
 body .footer {
-  background-color: black; /* Colore di sfondo del footer */
+  background-color: black; 
 }
-/* Tema chiaro (modalità attivata dopo il click) */
+/* tema chiaro  */
 body.light-mode {
   background-color: white;
   color: black;
@@ -566,52 +559,52 @@ body.light-mode .frase-intro,
 body.light-mode .single-project-title, 
 body.light-mode .single-project-text, 
 body.light-mode .footer-text {
-  color: black;  /* Colore del testo in modalità chiara */
-  background-color: white;  /* Colore di sfondo in modalità chiara */
+  color: black; 
+  background-color: white;  
 }
 
 body.light-mode .footer {
-  border-top: 1px solid black;  /* Modifica il bordo superiore del footer */
+  border-top: 1px solid black;  
 }
 
 body.light-mode .nav {
   background-color: #ffffff;
-  box-shadow: 0 0 5px rgb(255, 255, 255); /* bordo interno sfocato e trasparente */
+  box-shadow: 0 0 5px rgb(255, 255, 255); 
 }
 
 body.light-mode .nav a,
 body.light-mode .nav span {
-  color: rgb(0, 0, 0);  /* Colore rosso per i link nella nav in modalità chiara */
+  color: rgb(0, 0, 0); 
 }
 
 body.light-mode .nav a:hover,
 body.light-mode .nav span:hover {
-  color: rgb(32, 241, 0);  /* Colore rosso per i link nella nav in modalità chiara */
+  color: rgb(32, 241, 0); 
 }
 
 body.light-mode #roberta-valli-link-nav, body.light-mode #about-link-nav, 
 body.light-mode #project-link-nav  {
-  color: rgb(32, 241, 0);  /* Colore rosso per i link nella nav in modalità chiara */
+  color: rgb(32, 241, 0); 
   text-decoration: underline;
 }
 
 
 body.light-mode .project-title-collection,
 body.light-mode .project-description-collection {
-  color: black; /* Colore per i titoli e le descrizioni in modalità chiara */
+  color: black; 
 }
 
 body.light-mode .project-link {
-  color: #000000; /* Colore per i link specifici in modalità chiara */
+  color: #000000; 
 }
 
 body.light-mode .project-description-collection a:hover {
-  color: rgb(0, 255, 0);  /* Colore hover per i link in modalità chiara */
+  color: rgb(0, 255, 0);  
 }
 
 
 body.light-mode .title-section-about {
-  color: #000000; /* Colore per i link specifici in modalità chiara */
+  color: #000000; 
 }
     
 
