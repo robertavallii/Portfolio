@@ -49,6 +49,13 @@
 
 @font-face {
   font-family: 'SuisseIntl';
+  src: url('assets/font/SuisseIntl-FreeTrial/Web/Woff/SuisseIntlTrial-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
   src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-RegularIt.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
@@ -63,6 +70,13 @@
 
 @font-face {
   font-family: 'SuisseIntl';
+  src: url('assets/font/SuisseIntl-FreeTrial/Web/Woff/SuisseIntlTrial-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
   src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-MediumIt.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
@@ -71,6 +85,13 @@
 @font-face {
   font-family: 'SuisseIntl';
   src: url('/assets/font/SuisseIntl-FreeTrial/Web/WOFF2/SuisseIntlTrial-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('assets/font/SuisseIntl-FreeTrial/Web/Woff/SuisseIntlTrial-Semibold.woff') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
