@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "titolo_progetto": "titolo",
+    "immagini": [
+      {"url": "assets/immagini_progetti/01_onyx/01_onyx_image_08.jpg"}, 
+      {"url": "assets/immagini_progetti/01_onyx/01_onyx_image_08.jpg"}, 
+      {"url": "assets/immagini_progetti/01_onyx/01_onyx_image_08.jpg"}, 
+      {"url": "assets/immagini_progetti/01_onyx/01_onyx_image_08.jpg"}, 
+      {"url": "assets/immagini_progetti/01_onyx/01_onyx_image_08.jpg"}, 
+      {"url": "assets/immagini_progetti/01_onyx/01_onyx_image_08.jpg"} 
+    ],
+    "descrizione_completa": "ONYX is an imaginary fashion brand, conceived in a dystopian future set in the year 2100, where climate catastrophes have become the new normal. In this scenario, ONYX was born as a response to the need to survive and adapt to a hostile world by offering durable, functional and distinctively designed garments. After the first phase of development and conception of the brand and visual identity, there followed a phase of experimentation with AI, used for the creation of all the images and videos. The project was an opportunity to combine the designer's creativity with the potential of artificial intelligence, exploring new dimensions.",
+    "committente": "SUPSI",
+    "anno": "2024-2025",
+    "categoria": "Brand Identity - User Interface - User Experience"
+  } 
+]
